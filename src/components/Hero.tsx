@@ -46,10 +46,10 @@ const Hero = ({ onContactClick }: HeroProps) => {
               size="lg"
               onClick={onContactClick}
               variant="whatsapp"
-              className="font-semibold text-lg px-8 py-6 h-auto transition-spring group"
+              className="w-full sm:w-auto font-semibold text-sm sm:text-lg px-4 sm:px-8 py-4 sm:py-6 h-auto transition-spring group"
             >
-              FALAR COM UM ADVOGADO ESPECIALISTA
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
+              <span className="text-center">FALAR COM UM ADVOGADO ESPECIALISTA</span>
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth flex-shrink-0" />
             </Button>
           </div>
           
