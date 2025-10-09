@@ -20,27 +20,6 @@ const ContactSection = () => {
           <Card className="shadow-strong">
             <CardContent className="p-8 md:p-10">
               <ContactForm variant="default" />
-              
-              <div className="mt-8 pt-8 border-t border-border text-center">
-                <p className="text-sm text-muted-foreground mb-4">
-                  Ou entre em contato diretamente:
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="https://wa.me/5561999999999"
-                    className="text-secondary hover:text-secondary/80 font-medium transition-smooth"
-                  >
-                    WhatsApp: (61) 99999-9999
-                  </a>
-                  <span className="hidden sm:inline text-muted-foreground">•</span>
-                  <a
-                    href="mailto:contato@barbosaghani.adv.br"
-                    className="text-secondary hover:text-secondary/80 font-medium transition-smooth"
-                  >
-                    contato@barbosaghani.adv.br
-                  </a>
-                </div>
-              </div>
             </CardContent>
           </Card>
         </div>

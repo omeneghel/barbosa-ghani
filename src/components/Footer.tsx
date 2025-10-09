@@ -1,4 +1,4 @@
-import logo from "@/assets/logo-light.png";
+import logo from "@/assets/logo-footer.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="text-center">
           <div className="flex justify-center mb-4">
-            <img src={logo} alt="Barbosa & Ghani Advogados" className="h-16 w-auto brightness-0 invert" />
+            <img src={logo} alt="Barbosa & Ghani Advogados" className="h-16 w-auto" />
           </div>
           <p className="text-white/80 mb-8">
             Advogados Associados

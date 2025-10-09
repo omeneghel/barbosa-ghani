@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import logo from "@/assets/logo-light.png";
+import logo from "@/assets/logo-header.png";
 
 const Header = () => {
   return (

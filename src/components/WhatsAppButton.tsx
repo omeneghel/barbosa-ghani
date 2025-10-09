@@ -8,7 +8,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import ContactForm from "./ContactForm";
-import whatsappIcon from "@/assets/whatsapp-icon.png";
+import whatsappIcon from "@/assets/whatsapp-icon-new.png";
 
 const WhatsAppButton = () => {
   const [isOpen, setIsOpen] = useState(false);
