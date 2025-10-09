@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageCircle } from "lucide-react";
+import whatsappIcon from "@/assets/whatsapp-icon-new.png";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import ContactForm from "./ContactForm";
@@ -18,7 +18,11 @@ const WhatsAppButton = () => {
           className="h-14 w-14 md:h-16 md:w-16 rounded-full shadow-strong hover:shadow-[0_12px_40px_rgba(37,211,102,0.5)] transition-spring group"
           aria-label="Abrir formulário de contato"
         >
-          <MessageCircle className="h-7 w-7 md:h-8 md:w-8 group-hover:scale-110 transition-spring" />
+          <img
+            src={whatsappIcon}
+            alt="WhatsApp"
+            className="h-8 w-8 md:h-9 md:w-9 group-hover:scale-110 transition-spring"
+          />
         </Button>
       </div>
 
