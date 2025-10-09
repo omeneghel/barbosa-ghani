@@ -7,7 +7,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Barbosa & Ghani Advogados" className="h-12 md:h-14 w-auto" />
+            <img src={logo} alt="Barbosa & Ghani Advogados" className="h-16 md:h-20 w-auto" />
           </div>
           
           <div className="flex items-center gap-4 md:gap-6">

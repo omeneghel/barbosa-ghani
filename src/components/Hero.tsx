@@ -26,7 +26,7 @@ const Hero = ({ onContactClick }: HeroProps) => {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-6">
-            <img src={logo} alt="Barbosa & Ghani Advogados" className="h-20 md:h-24 w-auto" />
+            <img src={logo} alt="Barbosa & Ghani Advogados" className="h-32 md:h-40 w-auto" />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
             Advogados Especializados em Planos de Saúde
