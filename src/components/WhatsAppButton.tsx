@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import ContactForm from "./ContactForm";
-import whatsappIcon from "@/assets/whatsapp-icon-new.png";
 
 const WhatsAppButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,15 +10,15 @@ const WhatsAppButton = () => {
   return (
     <>
       {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50">
         <Button
           onClick={() => setIsOpen(true)}
           size="lg"
           variant="whatsapp"
-          className="h-16 w-16 rounded-full shadow-strong hover:shadow-[0_12px_40px_rgba(37,211,102,0.5)] transition-spring group"
+          className="h-14 w-14 md:h-16 md:w-16 rounded-full shadow-strong hover:shadow-[0_12px_40px_rgba(37,211,102,0.5)] transition-spring group"
           aria-label="Abrir formulário de contato"
         >
-          <img src={whatsappIcon.png} alt="WhatsApp" className="h-8 w-8 group-hover:scale-110 transition-spring" />
+          <MessageCircle className="h-7 w-7 md:h-8 md:w-8 group-hover:scale-110 transition-spring" />
         </Button>
       </div>
 
