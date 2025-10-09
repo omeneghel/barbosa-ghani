@@ -1,7 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Scale } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Scale, ArrowRight } from "lucide-react";
 
 const AboutSection = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contato");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="py-20 bg-muted/30" id="sobre">
       <div className="container mx-auto px-4">
@@ -31,11 +37,21 @@ const AboutSection = () => {
                 uma <strong className="text-secondary">advocacia combativa e, ao mesmo tempo, humana</strong>.
               </p>
               
-              <p className="text-foreground leading-relaxed">
+              <p className="text-foreground leading-relaxed mb-8">
                 Além da especialização em Direito da Saúde, o escritório também possui sólida atuação em áreas 
                 cíveis comuns, como <strong>Direito do Consumidor, Contratos e Responsabilidade Civil</strong>, 
                 garantindo um suporte jurídico completo aos seus clientes.
               </p>
+
+              <Button
+                size="lg"
+                onClick={scrollToContact}
+                variant="whatsapp"
+                className="font-semibold text-base px-8 py-6 h-auto transition-spring group"
+              >
+                AGENDE SUA CONSULTA
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
+              </Button>
             </div>
           </CardContent>
         </Card>

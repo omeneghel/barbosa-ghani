@@ -167,7 +167,8 @@ const ContactForm = ({ variant = "default", onSuccess }: ContactFormProps) => {
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full h-12 bg-secondary text-primary hover:bg-secondary/90 font-semibold text-base shadow-medium transition-spring"
+        variant="whatsapp"
+        className="w-full h-12 font-semibold text-base transition-spring"
       >
         {isSubmitting ? (
           "Enviando..."

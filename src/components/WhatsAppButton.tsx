@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageCircle, X } from "lucide-react";
+import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -8,6 +8,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import ContactForm from "./ContactForm";
+import whatsappIcon from "@/assets/whatsapp-icon.png";
 
 const WhatsAppButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,10 +20,11 @@ const WhatsAppButton = () => {
         <Button
           onClick={() => setIsOpen(true)}
           size="lg"
-          className="h-16 w-16 rounded-full bg-secondary hover:bg-secondary/90 shadow-strong hover:shadow-[0_12px_40px_rgba(197,147,81,0.4)] transition-spring group"
+          variant="whatsapp"
+          className="h-16 w-16 rounded-full shadow-strong hover:shadow-[0_12px_40px_rgba(37,211,102,0.5)] transition-spring group"
           aria-label="Abrir formulário de contato"
         >
-          <MessageCircle className="h-8 w-8 text-primary group-hover:scale-110 transition-spring" />
+          <img src={whatsappIcon} alt="WhatsApp" className="h-8 w-8 group-hover:scale-110 transition-spring" />
         </Button>
       </div>
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,11 +12,14 @@
     --background: 0 0% 100%;
     --foreground: 215 45% 15%;
     
-    --primary: 215 45% 15%; /* Deep navy blue #192A4E */
+    --primary: 223 53% 20%; /* Deep navy blue from logo #192A4E */
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 39 45% 55%; /* Elegant gold accent */
-    --secondary-foreground: 215 45% 15%;
+    --secondary: 38 43% 54%; /* Elegant gold accent */
+    --secondary-foreground: 223 53% 20%;
+    
+    --whatsapp: 142 70% 49%; /* WhatsApp vibrant green */
+    --whatsapp-foreground: 0 0% 100%;
     
     /* Light blue accent from second logo */
     --accent: 205 75% 65%;

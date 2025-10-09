@@ -1,4 +1,5 @@
-import { Clock, Laptop, MessageSquare, CheckCircle } from "lucide-react";
+import { Clock, Laptop, MessageSquare, CheckCircle, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const DifferentialsSection = () => {
   const differentials = [
@@ -24,6 +25,11 @@ const DifferentialsSection = () => {
     }
   ];
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contato");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="py-20 bg-primary text-white relative overflow-hidden">
       {/* Decorative Background Pattern */}
@@ -43,7 +49,7 @@ const DifferentialsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
           {differentials.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -67,6 +73,18 @@ const DifferentialsSection = () => {
               </div>
             );
           })}
+        </div>
+
+        <div className="text-center">
+          <Button
+            size="lg"
+            onClick={scrollToContact}
+            variant="whatsapp"
+            className="font-semibold text-base px-8 py-6 h-auto transition-spring group"
+          >
+            GARANTA SEU DIREITO À SAÚDE
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
+          </Button>
         </div>
       </div>
     </section>

@@ -1,4 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import { 
   Stethoscope, 
   Pill, 
@@ -60,6 +62,11 @@ const ServicesSection = () => {
     }
   ];
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contato");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="py-20 bg-background" id="servicos">
       <div className="container mx-auto px-4">
@@ -98,6 +105,18 @@ const ServicesSection = () => {
               </Card>
             );
           })}
+        </div>
+
+        <div className="text-center mt-12">
+          <Button
+            size="lg"
+            onClick={scrollToContact}
+            variant="whatsapp"
+            className="font-semibold text-base px-8 py-6 h-auto transition-spring group"
+          >
+            FALE CONOSCO SOBRE SEU CASO
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
+          </Button>
         </div>
       </div>
     </section>
