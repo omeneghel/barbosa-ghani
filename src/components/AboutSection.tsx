@@ -47,7 +47,7 @@ const AboutSection = () => {
                 size="lg"
                 onClick={scrollToContact}
                 variant="whatsapp"
-                className="w-full sm:w-auto font-semibold text-sm sm:text-base px-4 sm:px-8 py-4 sm:py-6 h-auto transition-spring group"
+                className="w-full sm:w-auto font-semibold text-sm sm:text-base px-8 sm:px-10 py-5 sm:py-6 h-auto transition-spring group"
               >
                 <span className="text-center">AGENDE SUA CONSULTA</span>
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth flex-shrink-0" />

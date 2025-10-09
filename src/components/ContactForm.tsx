@@ -168,7 +168,7 @@ const ContactForm = ({ variant = "default", onSuccess }: ContactFormProps) => {
         type="submit"
         disabled={isSubmitting}
         variant="whatsapp"
-        className="w-full h-12 font-semibold text-sm sm:text-base transition-spring"
+        className="w-full px-8 py-5 h-auto font-semibold text-sm sm:text-base transition-spring"
       >
         {isSubmitting ? (
           "Enviando..."
