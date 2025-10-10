@@ -86,7 +86,9 @@ const ContactForm = ({ variant = "default", onSuccess }: ContactFormProps) => {
         if (window.dataLayer) {
           window.dataLayer.push({
             event: "form_submission",
-            formData: payload,
+            nome: formData.nome,
+            email: formData.email,
+            telefone: formData.telefone,
           });
         }
 
