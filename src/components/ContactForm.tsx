@@ -66,6 +66,7 @@ const ContactForm = ({ variant = "default", onSuccess }: ContactFormProps) => {
       const payload = {
         ...formData,
         ...utmParams,
+        page_url: window.location.href,
       };
 
       // Send to webhook
