@@ -25,22 +25,22 @@ const AboutSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
           {/* Card Nájua Ghani */}
-          <Card className="shadow-medium overflow-hidden">
-            <div className="aspect-[3/4] overflow-hidden">
-              <img 
-                src={najuaPhoto} 
-                alt="Nájua Ghani - Advogada especialista em Direito da Saúde" 
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <Card className="shadow-medium">
             <CardContent className="p-6">
-              <div className="flex items-start gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="h-6 w-6 text-secondary" />
+              <div className="flex flex-col items-center mb-6">
+                <div className="w-40 h-40 rounded-full overflow-hidden mb-4 border-4 border-primary/10">
+                  <img 
+                    src={najuaPhoto} 
+                    alt="Nájua Ghani - Advogada especialista em Direito da Saúde" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-serif font-bold text-primary mb-1">Nájua Ghani</h3>
-                  <p className="text-sm text-secondary font-semibold">Advogada e Professora de Direito</p>
+                <div className="text-center">
+                  <h3 className="text-2xl font-serif font-bold text-primary mb-2">Nájua Ghani</h3>
+                  <div className="flex items-center justify-center gap-2 mb-3">
+                    <GraduationCap className="h-5 w-5 text-secondary" />
+                    <p className="text-sm text-secondary font-semibold">Advogada e Professora de Direito</p>
+                  </div>
                 </div>
               </div>
               <div className="space-y-3 text-sm text-foreground/80 leading-relaxed">
@@ -53,22 +53,22 @@ const AboutSection = () => {
           </Card>
 
           {/* Card Edivam Barbosa */}
-          <Card className="shadow-medium overflow-hidden">
-            <div className="aspect-[3/4] overflow-hidden">
-              <img 
-                src={edivamPhoto} 
-                alt="Edivam Barbosa - Advogado especialista em Direito da Saúde" 
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <Card className="shadow-medium">
             <CardContent className="p-6">
-              <div className="flex items-start gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="h-6 w-6 text-secondary" />
+              <div className="flex flex-col items-center mb-6">
+                <div className="w-40 h-40 rounded-full overflow-hidden mb-4 border-4 border-primary/10">
+                  <img 
+                    src={edivamPhoto} 
+                    alt="Edivam Barbosa - Advogado especialista em Direito da Saúde" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-serif font-bold text-primary mb-1">Edivam Barbosa</h3>
-                  <p className="text-sm text-secondary font-semibold">Advogado Especialista em Saúde Suplementar</p>
+                <div className="text-center">
+                  <h3 className="text-2xl font-serif font-bold text-primary mb-2">Edivam Barbosa</h3>
+                  <div className="flex items-center justify-center gap-2 mb-3">
+                    <GraduationCap className="h-5 w-5 text-secondary" />
+                    <p className="text-sm text-secondary font-semibold">Advogado Especialista em Saúde Suplementar</p>
+                  </div>
                 </div>
               </div>
               <div className="space-y-3 text-sm text-foreground/80 leading-relaxed">
