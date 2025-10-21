@@ -26,7 +26,7 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
           {/* Card Nájua Ghani */}
           <Card className="shadow-medium overflow-hidden">
-            <div className="aspect-[4/5] overflow-hidden">
+            <div className="aspect-[3/4] overflow-hidden">
               <img 
                 src={najuaPhoto} 
                 alt="Nájua Ghani - Advogada especialista em Direito da Saúde" 
@@ -54,7 +54,7 @@ const AboutSection = () => {
 
           {/* Card Edivam Barbosa */}
           <Card className="shadow-medium overflow-hidden">
-            <div className="aspect-[4/5] overflow-hidden">
+            <div className="aspect-[3/4] overflow-hidden">
               <img 
                 src={edivamPhoto} 
                 alt="Edivam Barbosa - Advogado especialista em Direito da Saúde" 
