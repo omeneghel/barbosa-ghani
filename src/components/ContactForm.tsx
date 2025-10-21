@@ -103,7 +103,7 @@ const ContactForm = ({ variant = "default", onSuccess }: ContactFormProps) => {
             `Olá! Me chamo ${formData.nome} e gostaria de falar com um advogado especialista.`
           );
           window.open(
-            `https://wa.me/5561999999999?text=${message}`,
+            `https://wa.me/5561984885377?text=${message}`,
             "_blank"
           );
           onSuccess?.();

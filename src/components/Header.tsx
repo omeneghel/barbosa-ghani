@@ -12,12 +12,12 @@ const Header = () => {
           
           <div className="flex items-center gap-4 md:gap-6">
             <a
-              href="https://wa.me/5561999999999"
+              href="https://wa.me/5561984885377"
               className="flex items-center gap-2 text-sm md:text-base text-primary hover:text-whatsapp transition-smooth font-medium"
               aria-label="WhatsApp"
             >
               <Phone className="h-4 w-4" />
-              <span className="hidden md:inline">(61) 99999-9999</span>
+              <span className="hidden md:inline">(61) 98488-5377</span>
             </a>
           </div>
         </div>
