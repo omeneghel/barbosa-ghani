@@ -10,16 +10,14 @@ const Footer = () => {
           <div className="flex justify-center mb-4">
             <img src={logo} alt="Barbosa & Ghani Advogados" className="h-32 md:h-36 w-auto" />
           </div>
-          <p className="text-white/80 mb-8">
-            Advogados Associados
-          </p>
-          
+          <p className="text-white/80 mb-8">Advogados Associados</p>
+
           <div className="border-t border-white/20 pt-8">
             <p className="text-sm text-white/70">
               © {currentYear} Barbosa & Ghani Advogados. Todos os direitos reservados.
             </p>
             <p className="text-xs text-white/60 mt-2">
-              OAB/DF - Advocacia especializada em Planos de Saúde e Direito Médico
+              OAB/DF - Advocacia especializada em Direito Imobiliário e Médico
             </p>
           </div>
         </div>
