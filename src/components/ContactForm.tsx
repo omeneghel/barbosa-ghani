@@ -8,9 +8,10 @@ import { Send } from "lucide-react";
 interface ContactFormProps {
   variant?: "default" | "popup";
   onSuccess?: () => void;
+  redirectMessage?: string;
 }
 
-const ContactForm = ({ variant = "default", onSuccess }: ContactFormProps) => {
+const ContactForm = ({ variant = "default", onSuccess, redirectMessage = "Olá! Me chamo ${formData.nome} e gostaria de falar com um advogado especialista." }: ContactFormProps) => {
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
@@ -99,9 +100,8 @@ const ContactForm = ({ variant = "default", onSuccess }: ContactFormProps) => {
         
         // Redirect to WhatsApp
         setTimeout(() => {
-          const message = encodeURIComponent(
-            `Olá! Me chamo ${formData.nome} e gostaria de falar com um advogado especialista.`
-          );
+          const finalMessage = redirectMessage.replace('${formData.nome}', formData.nome);
+          const message = encodeURIComponent(finalMessage);
           window.open(
             `https://wa.me/5561984885377?text=${message}`,
             "_blank"

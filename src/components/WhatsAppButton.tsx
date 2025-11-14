@@ -3,7 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import ContactForm from "./ContactForm";
 
-const WhatsAppButton = () => {
+interface WhatsAppButtonProps {
+  message?: string;
+}
+
+const WhatsAppButton = ({ message = "Olá! Me chamo ${formData.nome} e gostaria de falar com um advogado especialista." }: WhatsAppButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -39,7 +43,7 @@ const WhatsAppButton = () => {
             <p className="text-muted-foreground mb-6">
               Preencha seus dados e nossa equipe entrará em contato via WhatsApp.
             </p>
-            <ContactForm variant="popup" onSuccess={() => setIsOpen(false)} />
+            <ContactForm variant="popup" onSuccess={() => setIsOpen(false)} redirectMessage={message} />
           </div>
         </DialogContent>
       </Dialog>
