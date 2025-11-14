@@ -1,7 +1,11 @@
 import { Phone } from "lucide-react";
 import logo from "@/assets/logo-header.png";
 
-const Header = () => {
+interface HeaderProps {
+  onWhatsAppClick?: () => void;
+}
+
+const Header = ({ onWhatsAppClick }: HeaderProps) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft">
       <div className="container mx-auto px-4 py-4">
@@ -11,14 +15,14 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-4 md:gap-6">
-            <a
-              href="https://wa.me/5561984885377"
-              className="flex items-center gap-2 text-sm md:text-base text-primary hover:text-whatsapp transition-smooth font-medium"
+            <button
+              onClick={onWhatsAppClick}
+              className="flex items-center gap-2 text-sm md:text-base text-primary hover:text-whatsapp transition-smooth font-medium cursor-pointer"
               aria-label="WhatsApp"
             >
               <Phone className="h-4 w-4" />
               <span className="hidden md:inline">(61) 98488-5377</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
