@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, Home, Scale, Users, Gavel, Clock, FileCheck, Building } from "lucide-react";
+import { FileText, Home, Scale, Users, Gavel, Clock, FileCheck, Building, ArrowRight, Laptop, MessageSquare, CheckCircle } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import FAQSection from "@/components/FAQSection";
 import najuaImage from "@/assets/najua-ghani.jpg";
 import edivamImage from "@/assets/edivam-barbosa.jpg";
+import heroImage from "@/assets/hero-law.jpg";
+import logo from "@/assets/logo-footer.png";
 
 const DireitoImobiliario = () => {
   const [showWhatsApp, setShowWhatsApp] = useState(false);
@@ -68,17 +70,17 @@ const DireitoImobiliario = () => {
       description: "Experiência e personalização para atender sua demanda relacionada ao Direito Imobiliário."
     },
     {
-      icon: Home,
+      icon: Laptop,
       title: "Advocacia 100% Digital",
       description: "Atendemos clientes de todo o Brasil de forma online, sem a necessidade de deslocamento. Agilidade e conforto para você."
     },
     {
-      icon: Users,
+      icon: MessageSquare,
       title: "Comunicação Transparente",
       description: "Você será atualizado sobre cada etapa do seu processo, com acesso direto aos advogados via WhatsApp."
     },
     {
-      icon: FileCheck,
+      icon: CheckCircle,
       title: "Análise de Caso Sem Compromisso",
       description: "Oferecemos uma primeira consulta para avaliar a viabilidade do seu caso sem custo."
     }
@@ -125,32 +127,56 @@ const DireitoImobiliario = () => {
       
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-primary/10 via-secondary/5 to-background overflow-hidden">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxIDAgNiAyLjY5IDYgNnMtMi42OSA2LTYgNi02LTIuNjktNi02IDIuNjktNiA2LTZ6TTI0IDQ4YzMuMzEgMCA2IDIuNjkgNiA2cy0yLjY5IDYtNiA2LTYtMi42OS02LTYgMi42OS02IDYtNnoiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-30"></div>
-          
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `url(${heroImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/80" />
+          </div>
+
+          {/* Content */}
+          <div className="container mx-auto px-4 py-20 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary mb-6 animate-fade-up">
+              <div className="flex justify-center mb-6">
+                <img src={logo} alt="Barbosa & Ghani Advogados" className="h-48 md:h-56 w-auto" />
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
                 Advogados Especialistas em Direito Imobiliário
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+
+              <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
                 Assessoria jurídica experiente e especializada na defesa de direitos de imóveis.
               </p>
-              <Button
-                onClick={scrollToContact}
-                size="lg"
-                variant="whatsapp"
-                className="px-8 py-6 h-auto text-base md:text-lg font-semibold transition-spring animate-fade-up shadow-strong"
-                style={{ animationDelay: "0.2s" }}
-              >
-                Falar com um Advogado Especialista
-              </Button>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button
+                  size="lg"
+                  onClick={scrollToContact}
+                  variant="whatsapp"
+                  className="w-full sm:w-auto font-semibold text-sm sm:text-lg px-6 sm:px-10 py-5 sm:py-6 h-auto transition-spring group"
+                >
+                  <span className="text-center">FALAR COM UM ADVOGADO ESPECIALISTA</span>
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth flex-shrink-0" />
+                </Button>
+              </div>
+
+              <p className="text-white/70 text-sm mt-6">Análise de caso sem compromisso • Atendimento 100% digital</p>
             </div>
           </div>
-          
-          <div className="absolute bottom-0 left-0 right-0">
-            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-              <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="currentColor" className="text-background"/>
+
+          {/* Decorative Bottom Wave */}
+          <div className="absolute bottom-0 left-0 right-0 z-10">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+              <path
+                d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+                fill="hsl(var(--background))"
+              />
             </svg>
           </div>
         </section>
@@ -166,7 +192,7 @@ const DireitoImobiliario = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {services.map((service, index) => (
-                <Card key={index} className="border-primary/10 hover:border-primary/30 transition-all hover:shadow-lg">
+                <Card key={index} className="border-primary/10 hover:border-primary/30 transition-smooth hover:shadow-lg">
                   <CardContent className="p-6">
                     <div className="mb-4">
                       <service.icon className="h-12 w-12 text-primary" />
@@ -187,9 +213,10 @@ const DireitoImobiliario = () => {
                 onClick={scrollToContact}
                 size="lg"
                 variant="whatsapp"
-                className="px-8 py-6 h-auto text-base font-semibold transition-spring shadow-strong"
+                className="w-full sm:w-auto font-semibold text-sm sm:text-base px-8 sm:px-10 py-5 sm:py-6 h-auto transition-spring group"
               >
-                Falar com um Advogado Especialista
+                <span className="text-center">FALAR COM UM ADVOGADO ESPECIALISTA</span>
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth flex-shrink-0" />
               </Button>
             </div>
           </div>
@@ -275,45 +302,59 @@ const DireitoImobiliario = () => {
         </section>
 
         {/* Differentials Section */}
-        <section className="py-20 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxIDAgNiAyLjY5IDYgNnMtMi42OSA2LTYgNi02LTIuNjktNi02IDIuNjktNiA2LTZ6TTI0IDQ4YzMuMzEgMCA2IDIuNjkgNiA2cy0yLjY5IDYtNiA2LTYtMi42OS02LTYgMi42OS02IDYtNnoiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=')] opacity-50"></div>
-          
+        <section className="py-20 bg-primary text-white relative overflow-hidden">
+          {/* Decorative Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
+          </div>
+
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
                 Por que escolher a Barbosa & Ghani?
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xl text-white/90">
                 Temos compromisso na defesa dos seus direitos na área imobiliária.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-              {differentials.map((item, index) => (
-                <Card key={index} className="border-primary/10 hover:border-primary/30 transition-all hover:shadow-lg bg-card/80 backdrop-blur">
-                  <CardContent className="p-8">
-                    <div className="mb-4">
-                      <item.icon className="h-10 w-10 text-primary" />
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+              {differentials.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={index}
+                    className="flex gap-6 p-6 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-smooth"
+                  >
+                    <div className="flex-shrink-0">
+                      <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center">
+                        <Icon className="h-7 w-7 text-primary" />
+                      </div>
                     </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+                    <div>
+                      <h3 className="text-xl font-semibold mb-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-white/80 leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
             <div className="text-center">
               <Button
-                onClick={scrollToContact}
                 size="lg"
+                onClick={scrollToContact}
                 variant="whatsapp"
-                className="px-8 py-6 h-auto text-base font-semibold transition-spring shadow-strong"
+                className="w-full sm:w-auto font-semibold text-sm sm:text-base px-8 sm:px-10 py-5 sm:py-6 h-auto transition-spring group"
               >
-                Falar com um Advogado Especialista
+                <span className="text-center">FALAR COM UM ADVOGADO ESPECIALISTA</span>
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth flex-shrink-0" />
               </Button>
             </div>
           </div>
