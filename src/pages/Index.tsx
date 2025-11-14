@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import CredibilityBar from "@/components/CredibilityBar";
@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   const [showWhatsApp, setShowWhatsApp] = useState(false);
+  const whatsAppButtonRef = useRef<{ openPopup: () => void }>(null);
 
   useEffect(() => {
     // Show WhatsApp button after a short delay
@@ -23,9 +24,13 @@ const Index = () => {
     contactSection?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleWhatsAppClick = () => {
+    whatsAppButtonRef.current?.openPopup();
+  };
+
   return (
     <div className="min-h-screen">
-      <Header />
+      <Header onWhatsAppClick={handleWhatsAppClick} />
       <main className="pt-16">
         <Hero onContactClick={scrollToContact} />
         <CredibilityBar />
@@ -35,7 +40,7 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
-      {showWhatsApp && <WhatsAppButton />}
+      {showWhatsApp && <WhatsAppButton ref={whatsAppButtonRef} />}
     </div>
   );
 };

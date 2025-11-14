@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, forwardRef, useImperativeHandle } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import ContactForm from "./ContactForm";
@@ -7,8 +7,17 @@ interface WhatsAppButtonProps {
   message?: string;
 }
 
-const WhatsAppButton = ({ message = "Olá! Me chamo ${formData.nome} e gostaria de falar com um advogado especialista." }: WhatsAppButtonProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+export interface WhatsAppButtonRef {
+  openPopup: () => void;
+}
+
+const WhatsAppButton = forwardRef<WhatsAppButtonRef, WhatsAppButtonProps>(
+  ({ message = "Olá! Me chamo ${formData.nome} e gostaria de falar com um advogado especialista." }, ref) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    useImperativeHandle(ref, () => ({
+      openPopup: () => setIsOpen(true)
+    }));
 
   return (
     <>
@@ -49,6 +58,8 @@ const WhatsAppButton = ({ message = "Olá! Me chamo ${formData.nome} e gostaria 
       </Dialog>
     </>
   );
-};
+});
+
+WhatsAppButton.displayName = "WhatsAppButton";
 
 export default WhatsAppButton;

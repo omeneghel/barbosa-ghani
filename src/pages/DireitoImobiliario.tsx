@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -14,6 +14,7 @@ import logo from "@/assets/logo-footer.png";
 
 const DireitoImobiliario = () => {
   const [showWhatsApp, setShowWhatsApp] = useState(false);
+  const whatsAppButtonRef = useRef<{ openPopup: () => void }>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowWhatsApp(true), 2000);
@@ -23,6 +24,10 @@ const DireitoImobiliario = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById("contato");
     contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleWhatsAppClick = () => {
+    whatsAppButtonRef.current?.openPopup();
   };
 
   const services = [
@@ -123,7 +128,7 @@ const DireitoImobiliario = () => {
 
   return (
     <div className="min-h-screen">
-      <Header />
+      <Header onWhatsAppClick={handleWhatsAppClick} />
       
       <main className="pt-16">
         {/* Hero Section */}
@@ -391,7 +396,10 @@ const DireitoImobiliario = () => {
 
       <Footer />
       {showWhatsApp && (
-        <WhatsAppButton message="Olá, gostaria de falar com um advogado especialista em direito imobiliário." />
+        <WhatsAppButton 
+          ref={whatsAppButtonRef}
+          message="Olá, gostaria de falar com um advogado especialista em direito imobiliário." 
+        />
       )}
     </div>
   );
