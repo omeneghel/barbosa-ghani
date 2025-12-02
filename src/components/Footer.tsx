@@ -17,7 +17,7 @@ const Footer = () => {
               © {currentYear} Barbosa & Ghani Advogados. Todos os direitos reservados.
             </p>
             <p className="text-xs text-white/60 mt-2">
-              OAB/DF - Advocacia especializada em Direito Imobiliário e Médico
+              OAB/DF - Advocacia especializada em Direito Imobiliário, Médico e Divórcios
             </p>
           </div>
         </div>
