@@ -8,12 +8,10 @@ const ContactSection = () => {
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
-              Fale Conosco Agora e Garanta Seu Direito
+              Fale com um Advogado Especialista
             </h2>
             <p className="text-lg text-muted-foreground">
-              Não deixe que a burocracia coloque sua saúde em risco. 
-              <br />
-              <strong className="text-secondary">Nossa equipe está pronta para analisar seu caso.</strong>
+              Nossa equipe está pronta para analisar seu caso.
             </p>
           </div>
 
