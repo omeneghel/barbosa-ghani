@@ -189,7 +189,7 @@ const Divorcios = () => {
         </section>
 
         {/* Dores Section */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">
@@ -203,8 +203,14 @@ const Divorcios = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 bg-muted/30" id="servicos">
+        <section className="py-20 bg-background" id="servicos">
           <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">
+                Somos Especialistas em Divórcios
+              </h2>
+            </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => {
                 const Icon = service.icon;
@@ -232,11 +238,23 @@ const Divorcios = () => {
                 );
               })}
             </div>
+
+            <div className="text-center mt-12">
+              <Button
+                size="lg"
+                onClick={scrollToContact}
+                variant="whatsapp"
+                className="w-full sm:w-auto font-semibold text-sm sm:text-base px-8 sm:px-10 py-5 sm:py-6 h-auto transition-spring group"
+              >
+                <span className="text-center">FALAR COM UM ADVOGADO</span>
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth flex-shrink-0" />
+              </Button>
+            </div>
           </div>
         </section>
 
         {/* About Section */}
-        <section className="py-20 bg-background" id="sobre">
+        <section className="py-20 bg-muted/30" id="sobre">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">
@@ -372,7 +390,7 @@ const Divorcios = () => {
                 variant="whatsapp"
                 className="w-full sm:w-auto font-semibold text-sm sm:text-base px-8 sm:px-10 py-5 sm:py-6 h-auto transition-spring group"
               >
-                <span className="text-center">GARANTA SEU DIREITO À SAÚDE</span>
+                <span className="text-center">FALAR COM UM ADVOGADO</span>
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth flex-shrink-0" />
               </Button>
             </div>
